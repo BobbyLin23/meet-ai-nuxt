@@ -4,7 +4,7 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { v7 as uuidv7 } from 'uuid'
 import * as schema from '../db/schemas'
 import { getDB } from './db'
-import { runtimeConfig } from './rumtime-config'
+import { runtimeConfig } from './runtime-config'
 
 console.log(`Base URL is ${runtimeConfig.public.baseURL}`)
 

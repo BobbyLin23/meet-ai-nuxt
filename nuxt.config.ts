@@ -1,21 +1,18 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
-
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
-
   css: ['~/assets/css/tailwind.css'],
-  modules: ['shadcn-nuxt'],
+  modules: ['shadcn-nuxt', '@vueuse/nuxt', '@nuxt/icon'],
   shadcn: {
     prefix: '',
-    componentDir: './app/components/ui'
-  }
+    componentDir: './app/components/ui',
+  },
 })

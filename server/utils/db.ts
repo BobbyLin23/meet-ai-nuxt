@@ -4,13 +4,13 @@ import process from 'node:process'
 import { neon } from '@neondatabase/serverless'
 import { config } from 'dotenv'
 import { drizzle } from 'drizzle-orm/neon-http'
-import { runtimeConfig } from '~~/server/utils/rumtime-config'
+import { runtimeConfig } from '~~/server/utils/runtime-config'
 import * as schema from '../db/schemas'
 
 config({ path: '.env' })
 
 function createDB(dbSchema?: typeof schema) {
-  const sql = neon(process.env.DATABASE_URL!)
+  const sql = neon(process.env.NUXT_DATABASE_URL!)
   return drizzle({ client: sql, schema: dbSchema })
 }
 
