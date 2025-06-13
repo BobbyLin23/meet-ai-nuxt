@@ -6,6 +6,7 @@
   <SidebarProvider>
     <DashboardSidebar />
     <main class="w-screen h-screen flex flex-col bg-muted">
+      <DashboardNavbar />
       <slot />
     </main>
   </SidebarProvider>
